@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=poppins:wght@300;400;600;700;800;900&display=swap');
+
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    color: #ededed;
+    background-size: cover;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 90%;
+    padding: 20px 5%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    flex-wrap: wrap;
+}
+
+.logo {
+position: relative;
+    font-size: 25px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 600;
+}
+.logo::before {
+content: ' ';
+position: absolute;
+top: 0;
+right: 0;
+width: 100%;
+height: 100%;
+background: #081b29;
+animation: showRight 1s ease forwards;
+animation-delay: .4s;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 20px;
+    transition: .3s;
+}
+.navbar a:hover,
+.navbar a.active{
+color: #00abf0;
+}
+
+.home {
+height: 100vh;
+background:url('/Users/emils/IdeaProjects/WebPageHtml/src/main/resources/pic.jpg') no-repeat;
+background-size: cover;
+
+display: flex;
+align-items: center;
+padding: 0 10%;
+}
+
+.home-content {
+max-width: 600px
+}
+
+.home-content h1 {
+position: relative;
+font-size: 56px;
+font-weight: 700;
+line-height: 1.2;
+}
+
+.home-content h1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(8, 27, 41, 0.2);
+    animation: showRight 1s ease forwards;
+        animation-delay: 0.1s;
+}
+
+.home-content h3 {
+    position: relative;
+    font-size: 20px; /* Adjust the font size to a reasonable value */
+    font-weight: 100; /* Fix the typo here */
+    color: #ededed;
+    text-decoration: none;
+}
+
+
+.home-content h3::before {
+content: '';
+position: absolute;
+top: 0;
+right: 0;
+width: 100%;
+height: 100%;
+background: rgba(8, 27, 41, 0.2);
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.3s;
+}
+
+.home-content p {
+position:relative;
+ font-size: 16px;
+ margin: 20px 0 40px;
+ color: #ededed;
+ text-decoration: none;
+ }
+
+ .home-content p::before {
+ content: '';
+ position: absolute;
+ top: 0;
+ right: 0;
+ width: 100%;
+ height: 100%;
+ background: rgba(8, 27, 41, 0.2);
+     animation: showRight 1s ease forwards;
+     animation-delay: 1.6s;
+ }
+
+.home-sci {
+position: absolute;
+bottom: 40px;
+width: 110px;
+display: flex;
+justify-content: space-between;
+}
+
+.home-sci a{
+position: relative;
+display: inline-flex;
+justify-content: center;
+align-items: center;
+width: 40px;
+height: 40px;
+background: transparent;
+border: 2px solid #00abf0;
+border-radius: 50%;
+font-size: 20px;
+color: #00abf0;
+text-decoration: none;
+z-index: 1;
+overflow: hidden;
+transition: .5s
+}
+
+.home-sci a:hover {
+color: #081b29;
+}
+
+.home-sci a::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 0;
+height: 100%;
+background: #00abf0;
+z-index: -1;
+transition: .5s
+}
+
+.home-sci a:hover:before{
+width: 100%;
+}
+
+.code-imgHover {
+position: absolute;
+top: 0;
+right: 0px;
+width: 800px;
+height: 100%;
+background: transparent;
+transition: 3s;
+}
+
+.code-imgHover:hover {
+background: #081b29;
+opacity: 0.8;
+}
+
+.code-image {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    width: 900px;
+    height: 600px;
+    z-index: 10;
+}
+
+@keyframes showRight {
+100%{
+width: 0;
+}
+}
